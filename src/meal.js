@@ -17,6 +17,7 @@ function addIngredients (foodItem, ingredients) {
     ingredients.pop();
   }
   ingredients[ingredients.length] = foodItem;
+  return ingredients; 
 }
 
 function formatPrice(price) {
