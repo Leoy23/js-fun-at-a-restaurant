@@ -11,7 +11,7 @@ function createMenuItem(itemName, itemPrice, itemType) {
   }
 // Looking at the function "addIngredients", we include the parameters
 // "foodItem" and "ingredients" and then as the test ran through the if statement
-// each 
+// each
 function addIngredients (foodItem, ingredients) {
   if (ingredients.includes(foodItem)) {
     ingredients.pop();
@@ -21,7 +21,20 @@ function addIngredients (foodItem, ingredients) {
 
 function formatPrice(price) {
   return `$` + price;
+}
 
+function decreasePrice(decreaseItemPrice) {
+  return decreaseItemPrice - (decreaseItemPrice / 10)
+}
+
+
+function createRecipe (title, ingredients, type ) {
+  var recipe = {
+    title: title,
+    ingredients: ingredients,
+    type: type
+  }
+  return recipe;
 }
 
 module.exports = {
@@ -29,6 +42,6 @@ module.exports = {
   createMenuItem,
   addIngredients,
   formatPrice,
-  // decreasePrice,
-  // createRecipe
+  decreasePrice,
+  createRecipe
 }
