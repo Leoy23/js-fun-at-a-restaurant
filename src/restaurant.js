@@ -23,10 +23,27 @@ function addMenuItem(pizzaRestaurant, menuItem) {
   }
 }
 
-function removeMenuItem() {
-  
+// function removeMenuItem(pizzaRestaurant, menuItem, type) {
+//   for (var i = 0; i < pizzaRestaurant.menus[type].length; i++) {
+//     if (pizzaRestaurant.menus[type][i] === menuItem) {
+//       pizzaRestaurant.menus[type].splice(i, 1)
+//     }
+//   }
+// }
+function removeMenuItem(pizzaRestaurant, menuItem, type) {
+  for (var i = 0; i < pizzaRestaurant.menus[type].length; i++) {
+    if (pizzaRestaurant.menus[type][i].name === menuItem) {
+      pizzaRestaurant.menus[type].splice(i, 1)
+      return `No one is eating our ${menuItem} - it has been removed from the ${type} menu!`
+    }
+  } return `Sorry, we don't sell ${menuItem}, try adding a new recipe!`
 }
 
+// Only remove items that are on the menu
+// We want to remove info from
+//  Remove the item from menu and update interval
+// Use a for loop to access the array
+//deepEqual = array
 
 module.exports = {
   createRestaurant,
